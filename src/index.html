@@ -1,0 +1,42 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<link rel="shortcut icon" href="../assets/favicon.ico">
+<script src="https://code.highcharts.com/mapdata/countries/in/custom/in-all-disputed.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
+<link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    <div id="app"></div>
+    <script>
+        $(function () {
+            var header = $(".home_header");
+            var logo = $(".home_logo");
+            var scroll = $(window).scrollTop();
+            console.log('scroll [jQuery]', scroll);
+
+            if (scroll >= 150) {
+                header.addClass("sticky_header");
+                logo.addClass("sticky_logo");
+            } else {
+                header.removeClass("sticky_header");
+                logo.removeClass("sticky_logo");
+            }
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 150) {
+                    header.addClass("sticky_header");
+                    logo.addClass("sticky_logo");
+                } else {
+                    header.removeClass("sticky_header");
+                    logo.removeClass("sticky_logo");
+                }
+            });
+        });
+    </script>
+</body>
